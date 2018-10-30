@@ -1,4 +1,5 @@
-package com.rage.dootleggersota.Adapter;
+
+/*package com.rage.dootleggersota.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -59,3 +60,4 @@ public class ChangelogAdapter extends RecyclerView.Adapter<ChangelogAdapter.View
     }
 
 }
+*/
