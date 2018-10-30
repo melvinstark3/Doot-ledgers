@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bootleggers-OTA</string>
+    <string name="rom_name_stylised">B O O T L E G G E R S</string>
+    <string name="rom_text_logo">家</string>
+    <string name="notif_update_available">Update Available!</string>
+    <string name="notif_no_updates">Up To Date</string>
+    <string name="card_update_text_stylised">U P D A T E</string>
+    <string name="card_update_size_text">Update Size -</string>
+    <string name="card_update_overview">Overview</string>
+    <string name="old_builds_negative">No older builds available.</string>
 </resources>
