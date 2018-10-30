@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         String codename = execShell.exec("getprop ro.bootleggers.songcodename");
         codename = codename.trim();
         String build = execShell.exec("getprop ro.bootleggers.version_number");
-        build = build.trim();
+        build = "v"+build.trim();
         txBuildCodename.setText(codename);
         txBuildCode.setText(build);
     }
