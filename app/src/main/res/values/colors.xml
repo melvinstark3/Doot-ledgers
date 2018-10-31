@@ -3,7 +3,7 @@
     <color name="colorPrimary">#24242E</color>
     <color name="colorPrimaryDark">#121217</color>
     <color name="colorAccent">#E20090</color>
-    <color name="colorTextAccent">#E20090</color>
+    <color name="colorTextAccent">@*android:color/accent_material_light</color>
     <color name="colorTextLight">#F5F5F5</color>
     <color name="colorTextDark">#7f7f7f</color>
 </resources>
