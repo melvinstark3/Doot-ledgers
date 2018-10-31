@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/cardViewBuild"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,29 +27,16 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textViewBuildUpdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/card_update_text_stylised"
-                android:textColor="@color/colorTextAccent"
-                android:textSize="@dimen/text_size_small"
-                android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
                 android:id="@+id/textViewBuildName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="Harambe"
                 android:textColor="@color/colorTextAccent"
                 android:textSize="@dimen/text_size_large"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewBuildUpdate" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -102,9 +89,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayoutDownload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -129,6 +118,52 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewDownload"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:elevation="2dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutDownload"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayoutDownload"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDownload"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutDownload" />
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progressViewCircular"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="24dp"
+                android:visibility="gone"
+                app:donut_background_color="@color/colorPrimaryDark"
+                app:donut_finished_color="@color/colorAccent"
+                app:donut_max="100"
+                app:donut_prefix_text=" "
+                app:donut_progress="6"
+                app:donut_show_text="true"
+                app:donut_text_color="@color/colorTextLight"
+                app:donut_text_size="@dimen/text_size_small"
+                app:donut_unfinished_color="@color/colorPrimary"
+                app:donut_unfinished_stroke_width="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewListBreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/old_builds_negative"
+        android:textColor="@color/colorTextDark"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

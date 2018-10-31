@@ -9,4 +9,5 @@
     <string name="card_update_size_text">Update Size -</string>
     <string name="card_update_overview">Overview</string>
     <string name="old_builds_negative">No older builds available.</string>
+    <string name="directory">"/BootleggersOTA"</string>
 </resources>
