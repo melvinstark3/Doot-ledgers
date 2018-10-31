@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         defineLayouts();
         setCodenameAndBuild();
         managePermission();
-        makefolders();
+
         CheckUpdate checkUpdate = new CheckUpdate();
         if (checkUpdate.isAbleToCheckUpdate()) {
             if (checkUpdate.isUpdateAvailable()) {
@@ -97,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
             // not granted
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE);
         }
+        else {
+            makefolders();
+        }
     }
 
     @Override
@@ -115,13 +118,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void makefolders () {
         try {
-            File folder = new File(Environment.getExternalStorageDirectory() + "BootOTA/");
+            File folder = new File(Environment.getExternalStorageDirectory() + "/BootleggersOTA");
             if (!folder.exists())
                 if (folder.mkdir()) {
                     Log.e("ta", "");
                 }
                 else {
-                    Log.e("Download", "Startvhvhvhv");
+                    Log.e("ta", "Startvhvhvhv");
                 }
 
         }
